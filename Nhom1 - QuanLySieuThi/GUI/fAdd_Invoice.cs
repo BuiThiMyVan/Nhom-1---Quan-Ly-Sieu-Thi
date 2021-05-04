@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Nhom1___QuanLySieuThi.GUI
 {
-    public partial class fMain : Form
+    public partial class fAdd_Invoice : Form
     {
-        public fMain()
+        public fAdd_Invoice()
         {
             InitializeComponent();
-        }
-
-        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fList_Invoice frm = new fList_Invoice();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
         }
     }
 }

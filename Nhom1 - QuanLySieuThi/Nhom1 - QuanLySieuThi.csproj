@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="GUI\fAdd_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fAdd_Invoice.Designer.cs">
+      <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fList_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fList_Invoice.Designer.cs">
+      <DependentUpon>fList_Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +75,12 @@
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\fAdd_Invoice.resx">
+      <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fList_Invoice.resx">
+      <DependentUpon>fList_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
