@@ -1,0 +1,5 @@
+1. Module nhập hàng mới: Thiệp
+2. Module bán hàng + Tìm kiếm theo các tiêu chí: Hiến
+3. Module thống kê hàng hóa trong kho, lưu lượng nhập bán : Đạt
+4. Module quản lý khách hàng: Long
+5. Module quản lý nhân viên: Quỳnh
