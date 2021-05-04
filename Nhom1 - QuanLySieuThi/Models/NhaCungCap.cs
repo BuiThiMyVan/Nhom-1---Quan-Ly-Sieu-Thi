@@ -11,6 +11,8 @@ namespace Nhom1___QuanLySieuThi.Models
     {
         public int MaNCC { set; get; }
         public string TenNCC { set; get; }
+        public string SDT { set; get; }
+        public string DiaChi { set; get; }
 
         public NhaCungCap() { }
 
@@ -18,6 +20,8 @@ namespace Nhom1___QuanLySieuThi.Models
         {
             this.MaNCC = Int32.Parse(data["MaNCC"].ToString());
             this.TenNCC = data["TenNCC"].ToString();
+            this.SDT = data["SDT"].ToString();
+            this.DiaChi = data["DiaChi"].ToString();
         }
     }
 }
