@@ -13,7 +13,6 @@ namespace Nhom1___QuanLySieuThi.Models
         public int MaNV { set; get; }
         public DateTime NgayBan { set; get; }
         public int MaKH { set; get; }
-        public float TongTien { set; get; }
 
         public HoaDonBan() { }
 
@@ -23,7 +22,6 @@ namespace Nhom1___QuanLySieuThi.Models
             this.MaNV = Int32.Parse(data["MaNV"].ToString());
             this.NgayBan = DateTime.Parse(data["NgayBan"].ToString());
             this.MaKH = Int32.Parse(data["MaKH"].ToString());
-            this.TongTien = float.Parse(data["TongTien"].ToString());
         }
     }
 }
