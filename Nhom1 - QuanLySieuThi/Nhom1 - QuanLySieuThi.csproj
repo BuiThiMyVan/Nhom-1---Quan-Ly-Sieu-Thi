@@ -58,6 +58,7 @@
     <Compile Include="Models\HoaDonBan.cs" />
     <Compile Include="Models\HoaDonNhap.cs" />
     <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\LoaiHang.cs" />
     <Compile Include="Models\MatHang.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
