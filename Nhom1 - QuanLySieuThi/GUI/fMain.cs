@@ -16,5 +16,13 @@ namespace Nhom1___QuanLySieuThi.GUI
         {
             InitializeComponent();
         }
+
+        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fList_Invoice frm = new fList_Invoice();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

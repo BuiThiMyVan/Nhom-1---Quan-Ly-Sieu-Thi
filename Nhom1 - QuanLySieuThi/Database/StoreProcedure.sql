@@ -1,2 +1,67 @@
 USE NHOM1_QUANLYSIEUTHI
+GO
 
+-----------------------Thiep Invoice------------------------
+CREATE PROCEDURE SP_ChiTietHoaDonNhap_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM CHITIETHOADONNHAP
+END
+GO
+
+CREATE PROCEDURE SP_NhaCungCap_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM NHACUNGCAP
+END
+GO
+
+CREATE PROCEDURE SP_MatHang_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM MATHANG
+END
+GO
+
+CREATE PROCEDURE SP_HoaDonNhap_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM HOADONNHAP
+END
+GO
+
+CREATE PROCEDURE SP_HoaDonNhap_Insert
+  @MaNCC INT,
+  @NgayNhap DATE
+AS
+BEGIN
+  INSERT INTO HOADONNHAP
+    (MaNCC, NgayNhap)
+  VALUES(@MaNCC, @NgayNhap)
+END
+GO
+
+CREATE PROCEDURE SP_ChiTietHoaDonNhap_Insert
+  @MaHDN INT,
+  @MaMH INT,
+  @SoLuong INT,
+  @ThanhTien FLOAT
+AS
+BEGIN
+  INSERT INTO CHITIETHOADONNHAP
+    (MaHDN, MaMH, SoLuong, ThanhTien)
+  VALUES(@MaHDN, @MaMH, @SoLuong, @ThanhTien)
+END
+GO
+CREATE PROCEDURE HoaDonNhapVuaThem
+AS
+BEGIN
+select top 1
+	MaHDN
+from HOADONNHAP as HDN
+order by MaHDN desc
+END
