@@ -24,5 +24,13 @@ namespace Nhom1___QuanLySieuThi.GUI
             frm.ShowDialog();
             this.Show();
         }
+
+        private void MặtHàngtoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fItem frm = new fItem();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

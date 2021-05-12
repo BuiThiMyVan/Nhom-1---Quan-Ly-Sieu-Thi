@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 315);
             this.Controls.Add(this.txtDonGiaNhap);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.cbIdMatHang);
@@ -169,6 +169,7 @@
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.label1);
             this.Name = "fAdd_Invoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fAdd_Invoice";
             this.ResumeLayout(false);
             this.PerformLayout();

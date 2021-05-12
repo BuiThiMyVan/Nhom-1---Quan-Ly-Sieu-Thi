@@ -37,6 +37,7 @@
             this.tìmKiếmHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêHàngHóaLưuLượngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hướngDẫnSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MặtHàngtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,8 @@
             this.bánHàngToolStripMenuItem,
             this.tìmKiếmHàngHóaToolStripMenuItem,
             this.thốngKêHàngHóaLưuLượngToolStripMenuItem,
-            this.hướngDẫnSửDụngToolStripMenuItem});
+            this.hướngDẫnSửDụngToolStripMenuItem,
+            this.MặtHàngtoolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -107,6 +109,13 @@
             this.hướngDẫnSửDụngToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.hướngDẫnSửDụngToolStripMenuItem.Text = "Trợ Giúp";
             // 
+            // MặtHàngtoolStripMenuItem1
+            // 
+            this.MặtHàngtoolStripMenuItem1.Name = "MặtHàngtoolStripMenuItem1";
+            this.MặtHàngtoolStripMenuItem1.Size = new System.Drawing.Size(72, 20);
+            this.MặtHàngtoolStripMenuItem1.Text = "Mặt Hàng";
+            this.MặtHàngtoolStripMenuItem1.Click += new System.EventHandler(this.MặtHàngtoolStripMenuItem1_Click);
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +124,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ Thống Quản Lý Bán Hàng Siêu Thị";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -134,5 +144,6 @@
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmHàngHóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêHàngHóaLưuLượngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hướngDẫnSửDụngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MặtHàngtoolStripMenuItem1;
     }
 }
