@@ -56,6 +56,14 @@ namespace Nhom1___QuanLySieuThi.GUI
             HoaDonNhapList.DataSource = HoaDonNhapDAO.Instance.GetAll();
         }
 
+        private void LoadListSearch()
+        {
+            DateTime NgayNhap;
+            DateTime.TryParse(dtNgayNhap.Text, out NgayNhap);
+            HoaDonNhapList.DataSource = HoaDonNhapDAO.Instance.GetAll_HoaDonNhap(NgayNhap);
+            InvoiceList.DataSource = ChiTietHoaDonNhapDAO.Instance.GetAll_ChiTietHoaDonNhap(NgayNhap);
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             fAdd_Invoice frm = new fAdd_Invoice();
@@ -64,5 +72,15 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.Show();
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            LoadListSearch();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadListHoaDonNhap();
+            LoadListInvoice();
+        }
     }
 }

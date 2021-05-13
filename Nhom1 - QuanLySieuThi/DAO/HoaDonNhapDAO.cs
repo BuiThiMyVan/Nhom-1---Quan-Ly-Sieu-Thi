@@ -31,6 +31,18 @@ namespace Nhom1___QuanLySieuThi.DAO
             return list;
         }
 
+        public List<HoaDonNhap> GetAll_HoaDonNhap(DateTime NgayNhap)
+        {
+            List<HoaDonNhap> list = new List<HoaDonNhap>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_HoaDonNhap_Search @NgayNhap", new object[] { NgayNhap });
+            foreach (DataRow item in data.Rows)
+            {
+                HoaDonNhap entry = new HoaDonNhap(item);
+                list.Add(entry);
+            }
+            return list;
+        }
+
         public bool Insert(int MaNCC, DateTime NgayNhap)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("SP_HoaDonNhap_Insert @MaNCC , @NgayNhap", new object[] { MaNCC, NgayNhap });

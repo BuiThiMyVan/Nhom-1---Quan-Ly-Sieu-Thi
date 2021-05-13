@@ -53,7 +53,8 @@ namespace Nhom1___QuanLySieuThi.GUI
         private void LoadcomboboxMaLH()
         {
             cbMaLH.DataSource = LoaiHangDAO.Instance.GetAll();
-            cbMaLH.DisplayMember = "MaLH";
+            cbMaLH.DisplayMember = "TenLH";
+            cbMaLH.ValueMember = "MaLH";
         }
 
         private void LoadListItem()
@@ -68,7 +69,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             txtDonViTinh.Text = "";
             txtDonGiaNhap.Text = "";
             txtDonGiaBan.Text = "";
-            LoadcomboboxMaLH();
+           
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -86,8 +87,8 @@ namespace Nhom1___QuanLySieuThi.GUI
             float.TryParse(txtDonGiaNhap.Text, out DonGiaNhap);
             float DonGiaBan = -1;
             float.TryParse(txtDonGiaBan.Text, out DonGiaBan);
-            int MaLH = -1;
-            Int32.TryParse(cbMaLH.Text, out MaLH);
+            int MaLH;
+            Int32.TryParse(cbMaLH.SelectedValue.ToString(), out MaLH);
 
             try
             {
@@ -122,8 +123,8 @@ namespace Nhom1___QuanLySieuThi.GUI
             float.TryParse(txtDonGiaNhap.Text, out DonGiaNhap);
             float DonGiaBan = -1;
             float.TryParse(txtDonGiaBan.Text, out DonGiaBan);
-            int MaLH = -1;
-            Int32.TryParse(cbMaLH.Text, out MaLH);
+            int MaLH;
+            Int32.TryParse(cbMaLH.SelectedValue.ToString(), out MaLH);
 
             try
             {
@@ -154,7 +155,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             Int32.TryParse(dgvItem.Rows[row].Cells[0].Value.ToString().Trim(), out MaMH);
             try
             {
-                if (MessageBox.Show("Bạn có thật sự muốn xoá khách hàng này!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show("Bạn có thật sự muốn xoá mặt hàng này!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     MatHangDAO.Instance.Delete(MaMH);
                     MessageBox.Show("Xóa thành công!");
