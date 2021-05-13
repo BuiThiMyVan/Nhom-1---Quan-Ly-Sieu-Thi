@@ -39,9 +39,9 @@ namespace Nhom1___QuanLySieuThi.DAO
             int result = DataProvider.Instance.ExecuteNonQuery("SP_KhachHang_Update @maKH , @tenKhachHang , @diaChi , @soDienThoai", new object[] { maKH, tenKhachHang, diaChi, soDienThoai });
             return result > 0;
         }
-        public bool Delete(int idKhachHang)
+        public bool Delete(int maKH)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("SP_KhachHang_Delete @idKhachHang", new object[] { idKhachHang });
+            int result = DataProvider.Instance.ExecuteNonQuery("SP_KhachHang_Delete @maKH", new object[] { maKH });
 
             return result > 0;
         }

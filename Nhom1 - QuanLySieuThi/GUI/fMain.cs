@@ -16,5 +16,13 @@ namespace Nhom1___QuanLySieuThi.GUI
         {
             InitializeComponent();
         }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fKhachHang f = new fKhachHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
