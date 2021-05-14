@@ -24,5 +24,10 @@ namespace Nhom1___QuanLySieuThi.GUI
             f.ShowDialog();
             this.Show();
         }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
