@@ -164,3 +164,13 @@ BEGIN
     OR  MaLH LIKE N'%' + @searchValue + '%'
 END
 GO
+
+CREATE PROCEDURE SP_LoaiHang_Search
+	@maMH INT
+AS
+BEGIN
+	SELECT lh.MaLH, lh.TenLH
+	FROM MATHANG mh, LOAIHANG lh
+	WHERE mh.MaMH = @maMH and mh.MaLH = lh.MaLH
+END
+GO

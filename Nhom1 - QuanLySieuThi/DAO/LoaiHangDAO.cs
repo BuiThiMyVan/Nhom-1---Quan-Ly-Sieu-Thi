@@ -29,5 +29,12 @@ namespace Nhom1___QuanLySieuThi.DAO
             }
             return list;
         }
+
+        public LoaiHang GetLoaiHangByMa(int mamh)
+        {          
+            DataTable data = DataProvider.Instance.ExecuteQuery("SP_LoaiHang_Search @maMH", new object[] { mamh });
+            LoaiHang loaihang = new LoaiHang(data.Rows[0]);
+            return loaihang;
+        }
     }
 }

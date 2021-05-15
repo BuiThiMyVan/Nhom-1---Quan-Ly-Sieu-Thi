@@ -30,6 +30,7 @@
         {
             this.lb1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtDonViTinh = new System.Windows.Forms.TextBox();
             this.btnLamTrong = new System.Windows.Forms.Button();
             this.cbMaLH = new System.Windows.Forms.ComboBox();
@@ -50,7 +51,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvItem = new System.Windows.Forms.DataGridView();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
@@ -88,6 +88,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Mặt Hàng";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(115, 75);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(135, 22);
+            this.txtSoLuong.TabIndex = 14;
             // 
             // txtDonViTinh
             // 
@@ -284,13 +291,6 @@
             this.dgvItem.Name = "dgvItem";
             this.dgvItem.Size = new System.Drawing.Size(762, 289);
             this.dgvItem.TabIndex = 15;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(115, 75);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(135, 22);
-            this.txtSoLuong.TabIndex = 14;
             // 
             // fItem
             // 
