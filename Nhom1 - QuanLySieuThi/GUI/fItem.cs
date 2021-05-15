@@ -28,7 +28,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             txtDonViTinh.DataBindings.Add(new Binding("Text", dgvItem.DataSource, "DonViTinh", true, DataSourceUpdateMode.Never));
             txtDonGiaNhap.DataBindings.Add(new Binding("Text", dgvItem.DataSource, "DonGiaNhap", true, DataSourceUpdateMode.Never));
             txtDonGiaBan.DataBindings.Add(new Binding("Text", dgvItem.DataSource, "DonGiaBan", true, DataSourceUpdateMode.Never));
-            cbMaLH.DataBindings.Add(new Binding("Text", dgvItem.DataSource, "MaLH", true, DataSourceUpdateMode.Never));
+            cbMaLH.DataBindings.Add(new Binding("SelectedValue", dgvItem.DataSource, "MaLH", true, DataSourceUpdateMode.Never));
         }
 
         private void LoadData()

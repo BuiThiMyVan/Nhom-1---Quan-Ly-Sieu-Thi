@@ -25,14 +25,6 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.Show();
         }
 
-        private void MặtHàngtoolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            fItem frm = new fItem();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
-        }
-
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fKhachHang f = new fKhachHang();
@@ -44,6 +36,14 @@ namespace Nhom1___QuanLySieuThi.GUI
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void mặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fItem frm = new fItem();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Nhom1___QuanLySieuThi.Models;
-using NHOM1_QLKHO.DatAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data;

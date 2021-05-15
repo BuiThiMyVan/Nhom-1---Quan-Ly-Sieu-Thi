@@ -56,9 +56,9 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.dgvKhachHang);
             this.panel1.Location = new System.Drawing.Point(9, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(889, 531);
+            this.panel1.Size = new System.Drawing.Size(889, 556);
             this.panel1.TabIndex = 1;
             // 
             // groupBox2
@@ -71,9 +71,9 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox2.Location = new System.Drawing.Point(577, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(265, 201);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -82,7 +82,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(177, 125);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 38);
             this.btnSearch.TabIndex = 4;
@@ -94,7 +94,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(13, 135);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(153, 20);
             this.txtTimKiem.TabIndex = 3;
@@ -102,7 +102,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(188, 36);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(63, 38);
             this.btnDelete.TabIndex = 2;
@@ -113,7 +113,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(101, 36);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(63, 38);
             this.btnEdit.TabIndex = 1;
@@ -124,7 +124,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(13, 36);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(63, 38);
             this.btnAdd.TabIndex = 0;
@@ -142,9 +142,9 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(44, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(507, 201);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -154,7 +154,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(114, 87);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(378, 20);
             this.txtDiaChi.TabIndex = 7;
@@ -163,7 +163,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(114, 139);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(139, 20);
             this.txtSDT.TabIndex = 6;
@@ -172,7 +172,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             // 
             this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.Location = new System.Drawing.Point(114, 36);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(209, 20);
             this.txtTenKH.TabIndex = 5;
@@ -217,20 +217,20 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.dgvKhachHang.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Location = new System.Drawing.Point(44, 219);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 62;
             this.dgvKhachHang.RowTemplate.Height = 28;
-            this.dgvKhachHang.Size = new System.Drawing.Size(798, 274);
+            this.dgvKhachHang.Size = new System.Drawing.Size(798, 321);
             this.dgvKhachHang.TabIndex = 3;
             // 
             // fKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 487);
+            this.ClientSize = new System.Drawing.Size(906, 579);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fKhachHang";
