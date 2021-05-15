@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHOM1_QLKHO.DatAccessLayer
+namespace Nhom1___QuanLySieuThi.DAO
 {
     class DataProvider
     {

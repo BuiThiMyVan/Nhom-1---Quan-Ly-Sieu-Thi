@@ -46,13 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ChiTietHoaDonNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\KhachHangDAO.cs" />
-    <Compile Include="GUI\fKhachHang.cs">
+    <Compile Include="DAO\HoaDonNhapDAO.cs" />
+    <Compile Include="DAO\LoaiHangDAO.cs" />
+    <Compile Include="DAO\MatHangDAO.cs" />
+    <Compile Include="DAO\NhaCungCapDAO.cs" />
+    <Compile Include="GUI\fAdd_Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fKhachHang.Designer.cs">
-      <DependentUpon>fKhachHang.cs</DependentUpon>
+    <Compile Include="GUI\fAdd_Invoice.Designer.cs">
+      <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fItem.Designer.cs">
+      <DependentUpon>fItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fList_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fList_Invoice.Designer.cs">
+      <DependentUpon>fList_Invoice.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fMain.cs">
       <SubType>Form</SubType>
@@ -71,8 +87,14 @@
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\fKhachHang.resx">
-      <DependentUpon>fKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fAdd_Invoice.resx">
+      <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fItem.resx">
+      <DependentUpon>fItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fList_Invoice.resx">
+      <DependentUpon>fList_Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>

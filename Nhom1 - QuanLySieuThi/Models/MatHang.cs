@@ -15,6 +15,7 @@ namespace Nhom1___QuanLySieuThi.Models
         public string DonViTinh { set; get; }
         public float DonGiaNhap { set; get; }
         public float DonGiaBan { set; get; }
+        public int MaLH { set; get; }
 
         public MatHang() { }
 
@@ -26,6 +27,7 @@ namespace Nhom1___QuanLySieuThi.Models
             this.DonViTinh = data["DonViTinh"].ToString();
             this.DonGiaNhap = float.Parse(data["DonGiaNhap"].ToString());
             this.DonGiaBan = float.Parse(data["DonGiaBan"].ToString());
+            this.MaLH = Int32.Parse(data["MaLH"].ToString());
         }
     }
 }
