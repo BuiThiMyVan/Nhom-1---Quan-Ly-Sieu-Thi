@@ -59,6 +59,12 @@
     <Compile Include="GUI\fAdd_Invoice.Designer.cs">
       <DependentUpon>fAdd_Invoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fHoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fHoaDonBanHang.Designer.cs">
+      <DependentUpon>fHoaDonBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fAdd_Invoice.resx">
       <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fHoaDonBanHang.resx">
+      <DependentUpon>fHoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fItem.resx">
       <DependentUpon>fItem.cs</DependentUpon>

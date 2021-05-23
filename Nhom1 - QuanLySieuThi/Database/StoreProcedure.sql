@@ -186,3 +186,80 @@ BEGIN
 END
 GO
 -------------------------------------------------------/KDLONG---------------------------------------------
+
+
+
+
+
+----NVHIEN
+
+CREATE PROCEDURE Proc_HoaDonBan_GetAll
+AS
+BEGIN
+  SELECT *
+  FROM HOADONBAN
+END
+GO
+
+CREATE PROCEDURE Proc_HoaDonBan_Insert
+  @maNV int,@ngayBan date,@tenKH NVARCHAR(50),
+  @diaChi NVARCHAR(100),
+  @sdt NVARCHAR(10)
+AS
+BEGIN
+  INSERT INTO HOADONBAN
+    (MaNV, NgayBan)
+  VALUES(@maNV, @ngayBan)
+  INSERT INTO KHACHHANG
+    (TenKH, DiaChi,SDT)
+  VALUES(@tenKH, @diaChi,@sdt)
+END
+GO
+
+CREATE PROCEDURE Proc_HoaDonBan_Delete
+  @maHDB INT
+AS
+BEGIN
+  UPDATE CHITIETHOADONBAN
+  SET MaHDB = NULL
+  WHERE MaHDB = @maHDB
+
+  DELETE HOADONBAN
+  WHERE MaHDB = @maHDB
+END
+GO
+
+CREATE PROCEDURE Proc_HoaDonBan_Update
+  @maHDB int,@maNV int,@ngayBan date,@tenKH NVARCHAR(50),
+  @diaChi NVARCHAR(100),
+  @sdt NVARCHAR(10)
+AS
+BEGIN
+  UPDATE HOADONBAN
+  SET 
+  MaNV = @maNV,
+  NgayBan = @ngayBan
+  WHERE MaHDB = @maHDB
+
+  UPDATE KhachHang
+  SET 
+  TenKH = @tenKH,
+  DiaChi = @diaChi,
+  SDT = @sdt
+  WHERE MaKH = (select MaKH from HOADONBAN where MaHDB = @maHDB)
+  
+END
+GO
+
+CREATE PROCEDURE Proc_HoaDonBan_Search
+  @searchValue NVARCHAR(200)
+AS
+BEGIN
+  SELECT *
+  FROM HOADONBAN
+  WHERE MaHDB LIKE N'%' + @searchValue + '%'
+    OR MaNV LIKE N'%' + @searchValue + '%'
+    OR NgayBan LIKE N'%' + @searchValue + '%'
+END
+GO
+----NVHIEN

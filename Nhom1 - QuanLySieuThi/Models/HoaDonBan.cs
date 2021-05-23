@@ -14,6 +14,8 @@ namespace Nhom1___QuanLySieuThi.Models
         public DateTime NgayBan { set; get; }
         public int MaKH { set; get; }
 
+        public bool TrangThaiThanhToan { get; set; }
+
         public HoaDonBan() { }
 
         public HoaDonBan(DataRow data)
@@ -22,6 +24,7 @@ namespace Nhom1___QuanLySieuThi.Models
             this.MaNV = Int32.Parse(data["MaNV"].ToString());
             this.NgayBan = DateTime.Parse(data["NgayBan"].ToString());
             this.MaKH = Int32.Parse(data["MaKH"].ToString());
+            this.TrangThaiThanhToan = Boolean.Parse(data["TrangThaiThanhToan"].ToString());
         }
     }
 }
