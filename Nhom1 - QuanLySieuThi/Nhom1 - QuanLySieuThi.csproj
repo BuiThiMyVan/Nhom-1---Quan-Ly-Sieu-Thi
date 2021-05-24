@@ -46,18 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ChiTietHoaDonBanDAO.cs" />
     <Compile Include="DAO\ChiTietHoaDonNhapDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HoaDonBanHangDAO.cs" />
     <Compile Include="DAO\HoaDonNhapDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiHangDAO.cs" />
     <Compile Include="DAO\MatHangDAO.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="GUI\fAdd_Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fAdd_Invoice.Designer.cs">
       <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fChiTietHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fChiTietHoaDonBan.Designer.cs">
+      <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fHoaDonBanHang.cs">
       <SubType>Form</SubType>
@@ -102,6 +111,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fAdd_Invoice.resx">
       <DependentUpon>fAdd_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fChiTietHoaDonBan.resx">
+      <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fHoaDonBanHang.resx">
       <DependentUpon>fHoaDonBanHang.cs</DependentUpon>

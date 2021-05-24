@@ -11,8 +11,8 @@ namespace Nhom1___QuanLySieuThi.Models
     {
         public int MaNV { set; get; }
         public string TenNV { set; get; }
-        public DateTime NgaySinh { set; get; }
-        public int GioiTinh { set; get; }
+        public DateTime? NgaySinh { set; get; }
+        public int? GioiTinh { set; get; }
         public string DiaChi { set; get; }
         public string SDT { set; get; }
        
@@ -23,8 +23,8 @@ namespace Nhom1___QuanLySieuThi.Models
         {
             this.MaNV = Int32.Parse(data["MaNV"].ToString());
             this.TenNV = data["TenNV"].ToString();
-            this.NgaySinh = DateTime.Parse(data["NgaySinh"].ToString());
-            this.GioiTinh = Int32.Parse(data["GioiTinh"].ToString());
+            this.NgaySinh = NgaySinh == null ? (DateTime?)null : DateTime.Parse(data["NgaySinh"].ToString());
+            this.GioiTinh = GioiTinh == null ? (int?)null : Int32.Parse(data["GioiTinh"].ToString());
             this.SDT = data["SDT"].ToString();
            
         }

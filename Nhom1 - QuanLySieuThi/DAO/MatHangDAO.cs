@@ -31,6 +31,16 @@ namespace Nhom1___QuanLySieuThi.DAO
             return list;
         }
 
+        public int GetMaMH(string tenMH)
+        {
+            return int.Parse(DataProvider.Instance.ExecuteScalar("Proc_GetMaMHByTenMH @tenMH", new object[] { tenMH }).ToString());
+        }
+
+        public float GetGiaBanByMaMH(int maMH)
+        {
+            return float.Parse(DataProvider.Instance.ExecuteScalar("Proc_GiaBanByMaMH @maMH", new object[] { maMH }).ToString());
+
+        }
         public bool Insert(string TenMH, int SoLuong, string DonViTinh, float DonGiaNhap, float DonGiaBan, int MaLH)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("SP_MatHang_Insert @TenMH , @SoLuong , @DonViTinh , @DonGiaNhap , @DonGiaBan , @MaLH", new object[] { TenMH, SoLuong, DonViTinh, DonGiaNhap, DonGiaBan, MaLH });

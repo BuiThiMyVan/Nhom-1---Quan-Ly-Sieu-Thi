@@ -29,14 +29,14 @@ namespace Nhom1___QuanLySieuThi.DAO
             }
             return list;
         }
-        public bool Insert(HoaDonBan hoaDonBan,KhachHang kh)
+        public bool Insert(HoaDonBan hoaDonBan)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("Proc_HoaDonBan_Insert @maNV , @ngayBan , @tenKH , @diaChi , @sdt ", new object[] { hoaDonBan.MaNV,hoaDonBan.NgayBan,kh.TenKH,kh.DiaChi,kh.SDT});
+            int result = DataProvider.Instance.ExecuteNonQuery("Proc_HoaDonBan_Insert @maNV , @ngayBan ", new object[] { hoaDonBan.MaNV,hoaDonBan.NgayBan});
             return result > 0;
         }
-        public bool Update(HoaDonBan hoaDonBan, KhachHang kh)
+        public bool Update(HoaDonBan hoaDonBan)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("Proc_HoaDonBan_Update @maHDB , @maNV , @ngayBan , @tenKH , @diaChi , @sdt ", new object[] {hoaDonBan.MaHDB, hoaDonBan.MaNV, hoaDonBan.NgayBan, kh.TenKH, kh.DiaChi, kh.SDT });
+            int result = DataProvider.Instance.ExecuteNonQuery("Proc_HoaDonBan_Update @maHDB , @maNV , @ngayBan ", new object[] {hoaDonBan.MaHDB, hoaDonBan.MaNV, hoaDonBan.NgayBan });
             return result > 0;
         }
         public bool Delete(int maHDB)

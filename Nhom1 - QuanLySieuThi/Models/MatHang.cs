@@ -13,9 +13,9 @@ namespace Nhom1___QuanLySieuThi.Models
         public string TenMH { set; get; }
         public int SoLuong { set; get; }
         public string DonViTinh { set; get; }
-        public float DonGiaNhap { set; get; }
-        public float DonGiaBan { set; get; }
-        public int MaLH { set; get; }
+        public float? DonGiaNhap { set; get; }
+        public float? DonGiaBan { set; get; }
+        public int? MaLH { set; get; }
 
         public MatHang() { }
 
@@ -25,9 +25,9 @@ namespace Nhom1___QuanLySieuThi.Models
             this.TenMH = data["TenMH"].ToString();
             this.SoLuong = Int32.Parse(data["SoLuong"].ToString());
             this.DonViTinh = data["DonViTinh"].ToString();
-            this.DonGiaNhap = float.Parse(data["DonGiaNhap"].ToString());
-            this.DonGiaBan = float.Parse(data["DonGiaBan"].ToString());
-            this.MaLH = Int32.Parse(data["MaLH"].ToString());
+            this.DonGiaNhap = DonGiaNhap == null ? (float?)null : float.Parse(data["DonGiaNhap"].ToString());
+            this.DonGiaBan = DonGiaBan == null ? (float?)0 : float.Parse(data["DonGiaBan"].ToString()); 
+            this.MaLH = MaLH == null ? (int?)null : Int32.Parse(data["MaLH"].ToString());
         }
     }
 }

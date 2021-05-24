@@ -11,10 +11,8 @@ namespace Nhom1___QuanLySieuThi.Models
     {
         public int MaHDB { set; get; }
         public int MaNV { set; get; }
-        public DateTime NgayBan { set; get; }
-        public int MaKH { set; get; }
-
-        public bool TrangThaiThanhToan { get; set; }
+        public DateTime? NgayBan { set; get; }
+        public int? MaKH { set; get; }
 
         public HoaDonBan() { }
 
@@ -22,9 +20,8 @@ namespace Nhom1___QuanLySieuThi.Models
         {
             this.MaHDB = Int32.Parse(data["MaHDB"].ToString());
             this.MaNV = Int32.Parse(data["MaNV"].ToString());
-            this.NgayBan = DateTime.Parse(data["NgayBan"].ToString());
-            this.MaKH = Int32.Parse(data["MaKH"].ToString());
-            this.TrangThaiThanhToan = Boolean.Parse(data["TrangThaiThanhToan"].ToString());
+            this.NgayBan = NgayBan == null ? (DateTime?)null : DateTime.Parse(data["NgayBan"].ToString());
+            this.MaKH = MaKH == null ? (int?)null : Int32.Parse(data["MaKH"].ToString());
         }
     }
 }

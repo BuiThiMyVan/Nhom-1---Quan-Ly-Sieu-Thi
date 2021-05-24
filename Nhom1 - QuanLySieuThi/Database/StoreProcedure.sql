@@ -121,14 +121,15 @@ BEGIN
   UPDATE CHITIETHOADONNHAP
   SET MaMH = NULL
   WHERE MaMH = @MaMH
-  
+end
 
+go
 -------------------------------------------------KDLONG-----------------------------------------------------------
 CREATE PROCEDURE SP_KhachHang_GetAll
 AS
 BEGIN
   SELECT *
-  FROM KhachHang
+  FROM KHACHHANG
 END
 GO
 
@@ -202,17 +203,13 @@ END
 GO
 
 CREATE PROCEDURE Proc_HoaDonBan_Insert
-  @maNV int,@ngayBan date,@tenKH NVARCHAR(50),
-  @diaChi NVARCHAR(100),
-  @sdt NVARCHAR(10)
+  @maNV int,
+  @ngayBan date
 AS
 BEGIN
   INSERT INTO HOADONBAN
     (MaNV, NgayBan)
   VALUES(@maNV, @ngayBan)
-  INSERT INTO KHACHHANG
-    (TenKH, DiaChi,SDT)
-  VALUES(@tenKH, @diaChi,@sdt)
 END
 GO
 
@@ -230,9 +227,7 @@ END
 GO
 
 CREATE PROCEDURE Proc_HoaDonBan_Update
-  @maHDB int,@maNV int,@ngayBan date,@tenKH NVARCHAR(50),
-  @diaChi NVARCHAR(100),
-  @sdt NVARCHAR(10)
+  @maHDB int,@maNV int,@ngayBan date
 AS
 BEGIN
   UPDATE HOADONBAN
@@ -240,13 +235,6 @@ BEGIN
   MaNV = @maNV,
   NgayBan = @ngayBan
   WHERE MaHDB = @maHDB
-
-  UPDATE KhachHang
-  SET 
-  TenKH = @tenKH,
-  DiaChi = @diaChi,
-  SDT = @sdt
-  WHERE MaKH = (select MaKH from HOADONBAN where MaHDB = @maHDB)
   
 END
 GO
@@ -262,4 +250,68 @@ BEGIN
     OR NgayBan LIKE N'%' + @searchValue + '%'
 END
 GO
+
 ----NVHIEN
+Create Proc Proc_GetHDB_ById
+@maHDB int
+AS
+BEGIN
+  select * from HOADONBAN where MaHDB = @maHDB
+END
+GO
+
+----NVHIEN
+Create Proc Proc_GetChiTietHDB_ById
+@maHDB int
+AS
+BEGIN
+  select * from CHITIETHOADONBAN where MaHDB = @maHDB
+END
+GO
+
+Create Proc Proc_GetAllNV
+as
+begin 
+select * from NHANVIEN 
+end
+go
+
+Create Proc Proc_GetNVByMaHDB
+@maHDB int
+as
+begin 
+
+select * from NHANVIEN where MaNV = (select MaNV from HOADONBAN where MaHDB = @maHDB)
+end
+go
+
+Create Proc Proc_GetMHByMaHDB
+@maHDB int
+as begin 
+select * from MATHANG where MaMH = (select MaMH from CHITIETHOADONBAN where MaHDB = @maHDB)
+end
+go
+
+Create Proc Proc_InsertChiTietHDB
+@maHDB int ,@maMH int, @sl int, @giamGia float, @tongTien float
+as 
+begin
+	Insert into CHITIETHOADONBAN(MaHDB,MaMH,SoLuong,GiamGia,ThanhTien)
+	Values (@maHDB,@maMH,@sl,@giamGia,@tongTien)
+end
+go
+Create Proc Proc_GetMaMHByTenMH
+@tenMH nvarchar(MAX)
+as begin 
+	select MaMH from MATHANG where TenMH = @tenMH
+end
+
+go
+Create Proc Proc_GiaBanByMaMH
+@maMH int
+as 
+begin
+	select DonGiaBan from MATHANG where MaMH = @maMH
+end
+
+Proc_GiaBanByMaMH '1'

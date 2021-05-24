@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Nhom1___QuanLySieuThi.Models
 {
-    class ChiTietHoaDonBan
+    public class ChiTietHoaDonBan
     {
         public int MaHDB { set; get; }
         public int MaMH { set; get; }
