@@ -192,5 +192,10 @@ namespace Nhom1___QuanLySieuThi.GUI
                 new fChiTietHoaDonBan(int.Parse(txt_HDB.Text)).Show();
             }
         }
+
+        private void btn_TimKiem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

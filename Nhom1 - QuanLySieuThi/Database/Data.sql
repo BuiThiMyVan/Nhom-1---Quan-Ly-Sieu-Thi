@@ -172,3 +172,9 @@ INSERT INTO KHACHHANG VALUES(N'Bùi Đức Cảnh',N'Số 20 đường Bờ Sôn
 INSERT INTO KHACHHANG VALUES(N'Trần Huy Chí',N'Thôn Kim Động, Thị Trấn Kim Bài, Huyện Thanh Oai, Thành phố Hà Nội','0976054844')
 INSERT INTO KHACHHANG VALUES(N'Lã Xuân Chuyên',N'Số nhà 19A, ngõ 269 Lạc Long Quân, Phường Nghĩa Đô, Quận Cầu Giấy, Thành phố Hà Nội','0986109656')
 INSERT INTO KHACHHANG VALUES(N'Vũ Thành Công',N'Số 502 đường Võ Chí Công, Phường Xuân La, Quận Tây Hồ, Thành phố Hà Nội','0975861551')
+
+INSERT INTO NHANVIEN VALUES(N'Đặng Xuân Tuấn','1990-08-09',1,N'Hà Nội','0694589632')
+INSERT INTO NHANVIEN VALUES(N'Phạm Đức Thuận','1994-11-09',1,N'Hà Nội','0369789632')
+INSERT INTO NHANVIEN VALUES(N'Phạm Mai Anh','1997-12-11',0,N'Hà Nội','0694589632')
+INSERT INTO NHANVIEN VALUES(N'Đào Như Quỳnh','1996-08-10',0,N'Hà Nội','0694589632')
+INSERT INTO NHANVIEN VALUES(N'Đặng Xuân Tuấn','1990-08-09',1,N'Hà Nội','0694589632')
