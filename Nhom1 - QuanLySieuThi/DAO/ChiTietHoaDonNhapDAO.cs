@@ -30,7 +30,18 @@ namespace Nhom1___QuanLySieuThi.DAO
             }
             return list;
         }
-
+       
+        public List<ChiTietHoaDonNhap> SLNhap(DateTime CanTren, DateTime CanDuoi)
+        {
+            List<ChiTietHoaDonNhap> list = new List<ChiTietHoaDonNhap>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("Proc_LaySLNhap @CanTren , @CanDuoi", new object[] { CanTren, CanDuoi });
+            foreach (DataRow item in data.Rows)
+            {
+                ChiTietHoaDonNhap entry = new ChiTietHoaDonNhap(item);
+                list.Add(entry);
+            }
+            return list;
+        }
         public List<ChiTietHoaDonNhap> GetAll_ChiTietHoaDonNhap(DateTime NgayNhap)
         {
             List<ChiTietHoaDonNhap> list = new List<ChiTietHoaDonNhap>();

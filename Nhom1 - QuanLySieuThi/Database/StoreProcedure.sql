@@ -321,7 +321,7 @@ as
 begin
 	select DonGiaBan from MATHANG where MaMH = @maMH
 end
-
+go
 ----Proc_GiaBanByMaMH '1'
 
 --dat----
@@ -330,23 +330,27 @@ Create Proc Proc_LaySLNhap
  @CanDuoi date
 as
 begin
-	select * from CHITIETHOADONNHAP,HOADONNHAP where CHITIETHOADONNHAP.MaHDN = HOADONNHAP.MaHDN and NgayNhap between @CanDuoi and @CanTren
+	select CHITIETHOADONNHAP.MaHDN,CHITIETHOADONNHAP.MaMH,CHITIETHOADONNHAP.SoLuong,CHITIETHOADONNHAP.ThanhTien
+	from CHITIETHOADONNHAP,HOADONNHAP where CHITIETHOADONNHAP.MaHDN = HOADONNHAP.MaHDN and NgayNhap between  @CanDuoi and @CanTren
 
 end
+go
 
+Proc_LaySLNhap '05/05/2021' ,'05/20/2021'
 Create Proc Proc_LaySLXuat
  @CanTren date,
  @CanDuoi date
 as
 begin
-	select * from CHITIETHOADONBAN,HOADONBAN where CHITIETHOADONBAN.MaHDB = HOADONBAN.MaHDB and NgayBan between @CanDuoi and @CanTren
+	select CHITIETHOADONBAN.MaHDB,CHITIETHOADONBAN.MaMH,CHITIETHOADONBAN.SoLuong,CHITIETHOADONBAN.GiamGia,CHITIETHOADONBAN.ThanhTien
+	from CHITIETHOADONBAN,HOADONBAN where CHITIETHOADONBAN.MaHDB = HOADONBAN.MaHDB and NgayBan between @CanDuoi and @CanTren
 
 end
-
+go
 Create Proc Proc_LaySLTon
 as
 begin
 	select * from MATHANG where SoLuong >0
 end
-
+go
 Proc_LaySLTon
