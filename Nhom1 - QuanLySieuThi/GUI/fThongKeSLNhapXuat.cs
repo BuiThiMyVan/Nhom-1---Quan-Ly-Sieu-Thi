@@ -31,7 +31,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             ListNhap.DataSource = ChiTietHoaDonNhapDAO.Instance.SLNhap(CanTren, CanDuoi);
 
             dtgXuat.DataSource = ListXuat;
-            ListNhap.DataSource = ChiTietHoaDonBanDAO.Instance.SLBan(CanTren, CanDuoi);
+            ListXuat.DataSource = ChiTietHoaDonBanDAO.Instance.SLBan(CanTren, CanDuoi);
 
         }
 
@@ -42,9 +42,10 @@ namespace Nhom1___QuanLySieuThi.GUI
             dtgNhap.Columns["SoLuong"].HeaderText = "Số Lượng";
             dtgNhap.Columns["ThanhTien"].HeaderText = "Thành Tiền";
 
-            dtgXuat.Columns["MaHDN"].HeaderText = "Mã Hóa Đơn";
+            dtgXuat.Columns["MaHDB"].HeaderText = "Mã Hóa Đơn";
             dtgXuat.Columns["MaMH"].HeaderText = "Mã Mặt Hàng";
             dtgXuat.Columns["SoLuong"].HeaderText = "Số Lượng";
+            dtgXuat.Columns["GiamGia"].HeaderText = "Giảm giá";
             dtgXuat.Columns["ThanhTien"].HeaderText = "Thành Tiền";
         }
 
@@ -52,6 +53,13 @@ namespace Nhom1___QuanLySieuThi.GUI
         {
             LoadData();
             EditDataGridViewHeader();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            fQuanLyHang fQuanLyHang = new fQuanLyHang();
+            fQuanLyHang.Show();
+            this.Hide();
         }
     }
 }

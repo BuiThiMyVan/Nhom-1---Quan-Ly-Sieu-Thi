@@ -38,6 +38,8 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXuat)).BeginInit();
             this.SuspendLayout();
@@ -45,31 +47,31 @@ namespace Nhom1___QuanLySieuThi.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 61);
+            this.label1.Location = new System.Drawing.Point(248, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Từ ngày";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(584, 61);
+            this.label2.Location = new System.Drawing.Point(653, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.label2.Text = "Đến ngày";
             // 
             // dtCanDuoi
             // 
-            this.dtCanDuoi.Location = new System.Drawing.Point(235, 61);
+            this.dtCanDuoi.Location = new System.Drawing.Point(325, 81);
             this.dtCanDuoi.Name = "dtCanDuoi";
             this.dtCanDuoi.Size = new System.Drawing.Size(200, 20);
             this.dtCanDuoi.TabIndex = 2;
             // 
             // dtCanTren
             // 
-            this.dtCanTren.Location = new System.Drawing.Point(642, 61);
+            this.dtCanTren.Location = new System.Drawing.Point(732, 81);
             this.dtCanTren.Name = "dtCanTren";
             this.dtCanTren.Size = new System.Drawing.Size(200, 20);
             this.dtCanTren.TabIndex = 3;
@@ -77,22 +79,22 @@ namespace Nhom1___QuanLySieuThi.GUI
             // dtgNhap
             // 
             this.dtgNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgNhap.Location = new System.Drawing.Point(45, 227);
+            this.dtgNhap.Location = new System.Drawing.Point(33, 252);
             this.dtgNhap.Name = "dtgNhap";
-            this.dtgNhap.Size = new System.Drawing.Size(417, 286);
+            this.dtgNhap.Size = new System.Drawing.Size(523, 286);
             this.dtgNhap.TabIndex = 4;
             // 
             // dtgXuat
             // 
             this.dtgXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgXuat.Location = new System.Drawing.Point(519, 227);
+            this.dtgXuat.Location = new System.Drawing.Point(613, 252);
             this.dtgXuat.Name = "dtgXuat";
-            this.dtgXuat.Size = new System.Drawing.Size(404, 286);
+            this.dtgXuat.Size = new System.Drawing.Size(514, 286);
             this.dtgXuat.TabIndex = 5;
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.Location = new System.Drawing.Point(459, 89);
+            this.btnXacNhan.Location = new System.Drawing.Point(536, 136);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(75, 23);
             this.btnXacNhan.TabIndex = 6;
@@ -103,26 +105,50 @@ namespace Nhom1___QuanLySieuThi.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(147, 179);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(181, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 13);
+            this.label3.Size = new System.Drawing.Size(170, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Danh sách hàng nhập";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(653, 179);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(822, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.Size = new System.Drawing.Size(161, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Danh sách hàng bán";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(13, 13);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Trở về";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(438, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(284, 24);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Thống kê số lượng nhập xuất";
             // 
             // fThongKeSLNhapXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 637);
+            this.ClientSize = new System.Drawing.Size(1147, 706);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnXacNhan);
@@ -152,5 +178,7 @@ namespace Nhom1___QuanLySieuThi.GUI
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label5;
     }
 }

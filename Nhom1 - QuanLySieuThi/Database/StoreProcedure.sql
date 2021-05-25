@@ -336,7 +336,7 @@ begin
 end
 go
 
-Proc_LaySLNhap '05/05/2021' ,'05/20/2021'
+Proc_LaySLNhap '05/05/2021' ,'05/25/2021'
 Create Proc Proc_LaySLXuat
  @CanTren date,
  @CanDuoi date

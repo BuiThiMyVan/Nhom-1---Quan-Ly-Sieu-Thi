@@ -31,11 +31,11 @@ namespace Nhom1___QuanLySieuThi.DAO
         }
         public List<ChiTietHoaDonBan> SLBan(DateTime CanTren, DateTime CanDuoi)
         {
-            List<ChiTietHoaDonNhap> list = new List<ChiTietHoaDonNhap>();
+            List<ChiTietHoaDonBan> list = new List<ChiTietHoaDonBan>();
             DataTable data = DataProvider.Instance.ExecuteQuery("Proc_LaySLXuat @CanTren , @CanDuoi", new object[] { CanTren, CanDuoi });
             foreach (DataRow item in data.Rows)
             {
-                ChiTietHoaDonNhap entry = new ChiTietHoaDonNhap(item);
+                ChiTietHoaDonBan entry = new ChiTietHoaDonBan(item);
                 list.Add(entry);
             }
             return list;
