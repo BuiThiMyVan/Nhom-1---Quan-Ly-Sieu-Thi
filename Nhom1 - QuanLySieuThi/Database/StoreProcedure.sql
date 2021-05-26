@@ -313,5 +313,5 @@ as
 begin
 	select DonGiaBan from MATHANG where MaMH = @maMH
 end
-
+go
 Proc_GiaBanByMaMH '1'
