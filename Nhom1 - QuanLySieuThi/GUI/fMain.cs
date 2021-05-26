@@ -52,5 +52,13 @@ namespace Nhom1___QuanLySieuThi.GUI
             fQuanLyHang.Show();
             this.Hide();
         }
+
+        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fHoaDonBanHang frm = new fHoaDonBanHang();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

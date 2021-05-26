@@ -188,7 +188,6 @@ namespace Nhom1___QuanLySieuThi.GUI
             }
             else
             { 
-                this.Hide();
                 new fChiTietHoaDonBan(int.Parse(txt_HDB.Text)).Show();
             }
         }

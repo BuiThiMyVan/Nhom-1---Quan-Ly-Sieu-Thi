@@ -18,7 +18,7 @@ namespace Nhom1___QuanLySieuThi.GUI
         {
             InitializeComponent();
             LoadData();
-              EditDataGridViewHeader();
+            EditDataGridViewHeader();
         }
 
        
@@ -39,6 +39,14 @@ namespace Nhom1___QuanLySieuThi.GUI
             dtHangTon.Columns["DonGiaNhap"].HeaderText = "Đơn Giá Nhập";
             dtHangTon.Columns["DonGiaBan"].HeaderText = "Đơn Giá Bán";
             dtHangTon.Columns["MaLH"].HeaderText = "Mã Loại Hàng";
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            fThongKeSLNhapXuat frm = new fThongKeSLNhapXuat();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

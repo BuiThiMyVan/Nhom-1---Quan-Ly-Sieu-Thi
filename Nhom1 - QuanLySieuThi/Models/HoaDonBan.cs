@@ -20,8 +20,9 @@ namespace Nhom1___QuanLySieuThi.Models
         {
             this.MaHDB = Int32.Parse(data["MaHDB"].ToString());
             this.MaNV = Int32.Parse(data["MaNV"].ToString());
-            this.NgayBan = NgayBan == null ? (DateTime?)null : DateTime.Parse(data["NgayBan"].ToString());
+            this.NgayBan = DateTime.Parse(data["NgayBan"].ToString());
             this.MaKH = MaKH == null ? (int?)null : Int32.Parse(data["MaKH"].ToString());
+
         }
     }
 }

@@ -35,7 +35,6 @@
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìmKiếmHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêHàngHóaLưuLượngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hướngDẫnSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -48,7 +47,6 @@
             this.danhMụcToolStripMenuItem,
             this.nhậpHàngToolStripMenuItem,
             this.bánHàngToolStripMenuItem,
-            this.tìmKiếmHàngHóaToolStripMenuItem,
             this.thốngKêHàngHóaLưuLượngToolStripMenuItem,
             this.hướngDẫnSửDụngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -101,12 +99,7 @@
             this.bánHàngToolStripMenuItem.Name = "bánHàngToolStripMenuItem";
             this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
             this.bánHàngToolStripMenuItem.Text = "Bán Hàng";
-            // 
-            // tìmKiếmHàngHóaToolStripMenuItem
-            // 
-            this.tìmKiếmHàngHóaToolStripMenuItem.Name = "tìmKiếmHàngHóaToolStripMenuItem";
-            this.tìmKiếmHàngHóaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.tìmKiếmHàngHóaToolStripMenuItem.Text = "Tìm Kiếm Hàng Hóa";
+            this.bánHàngToolStripMenuItem.Click += new System.EventHandler(this.bánHàngToolStripMenuItem_Click);
             // 
             // thốngKêHàngHóaLưuLượngToolStripMenuItem
             // 
@@ -146,7 +139,6 @@
         private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhậpHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bánHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tìmKiếmHàngHóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêHàngHóaLưuLượngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hướngDẫnSửDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mặtHàngToolStripMenuItem;

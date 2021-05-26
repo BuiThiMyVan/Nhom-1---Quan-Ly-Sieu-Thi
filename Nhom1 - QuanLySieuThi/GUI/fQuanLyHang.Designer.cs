@@ -32,7 +32,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.dtHangTon = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtHangTon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,25 +63,27 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.label2.TabIndex = 2;
             this.label2.Text = "Hàng hóa tồn kho";
             // 
-            // button1
+            // btnThongKe
             // 
-            this.button1.Location = new System.Drawing.Point(296, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Thống kê số lượng nhập xuất";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThongKe.Location = new System.Drawing.Point(296, 415);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(201, 23);
+            this.btnThongKe.TabIndex = 3;
+            this.btnThongKe.Text = "Thống kê số lượng nhập xuất";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // QuanLyHang
+            // fQuanLyHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtHangTon);
-            this.Name = "QuanLyHang";
+            this.Name = "fQuanLyHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyHang";
             ((System.ComponentModel.ISupportInitialize)(this.dtHangTon)).EndInit();
             this.ResumeLayout(false);
@@ -94,6 +96,6 @@ namespace Nhom1___QuanLySieuThi.GUI
         private System.Windows.Forms.DataGridView dtHangTon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }
