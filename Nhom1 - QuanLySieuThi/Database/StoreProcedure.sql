@@ -83,6 +83,10 @@ BEGIN
   INSERT INTO CHITIETHOADONNHAP
     (MaHDN, MaMH, SoLuong, ThanhTien)
   VALUES(@MaHDN, @MaMH, @SoLuong, @ThanhTien)
+
+  Update MATHANG
+  set SoLuong = SoLuong + @SoLuong
+  where MaMH = @MaMH
 END
 GO
 
@@ -298,6 +302,10 @@ as
 begin
 	Insert into CHITIETHOADONBAN(MaHDB,MaMH,SoLuong,GiamGia,ThanhTien)
 	Values (@maHDB,@maMH,@sl,@giamGia,@tongTien)
+
+	Update MATHANG
+  set SoLuong = SoLuong + @sl
+  where MaMH = @MaMH
 end
 go
 Create Proc Proc_GetMaMHByTenMH
@@ -314,4 +322,35 @@ begin
 	select DonGiaBan from MATHANG where MaMH = @maMH
 end
 go
-Proc_GiaBanByMaMH '1'
+----Proc_GiaBanByMaMH '1'
+
+--dat----
+Create Proc Proc_LaySLNhap
+ @CanTren date,
+ @CanDuoi date
+as
+begin
+	select CHITIETHOADONNHAP.MaHDN,CHITIETHOADONNHAP.MaMH,CHITIETHOADONNHAP.SoLuong,CHITIETHOADONNHAP.ThanhTien
+	from CHITIETHOADONNHAP,HOADONNHAP where CHITIETHOADONNHAP.MaHDN = HOADONNHAP.MaHDN and NgayNhap between  @CanDuoi and @CanTren
+
+end
+go
+
+Proc_LaySLNhap '05/05/2021' ,'05/25/2021'
+Create Proc Proc_LaySLXuat
+ @CanTren date,
+ @CanDuoi date
+as
+begin
+	select CHITIETHOADONBAN.MaHDB,CHITIETHOADONBAN.MaMH,CHITIETHOADONBAN.SoLuong,CHITIETHOADONBAN.GiamGia,CHITIETHOADONBAN.ThanhTien
+	from CHITIETHOADONBAN,HOADONBAN where CHITIETHOADONBAN.MaHDB = HOADONBAN.MaHDB and NgayBan between @CanDuoi and @CanTren
+
+end
+go
+Create Proc Proc_LaySLTon
+as
+begin
+	select * from MATHANG where SoLuong >0
+end
+go
+Proc_LaySLTon

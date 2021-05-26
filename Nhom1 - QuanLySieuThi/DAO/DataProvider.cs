@@ -13,8 +13,8 @@ namespace Nhom1___QuanLySieuThi.DAO
         private static DataProvider instance; // Ctrl + R + E
 
         //    private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
-
-        private string connectionSTR = "Data Source=.;Initial Catalog=NHOM1_QUANLYSIEUTHI;Integrated Security=True";
+         
+        private string connectionSTR = "Data Source= DESKTOP-6E6UK3P;Initial Catalog=NHOM1_QUANLYSIEUTHI;Integrated Security=True";
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }

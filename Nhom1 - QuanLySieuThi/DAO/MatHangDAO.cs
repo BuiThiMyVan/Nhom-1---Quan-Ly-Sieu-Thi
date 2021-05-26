@@ -30,6 +30,17 @@ namespace Nhom1___QuanLySieuThi.DAO
             }
             return list;
         }
+        public List<MatHang> HangTon()
+        {
+            List<MatHang> list = new List<MatHang>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("Proc_LaySLTon");
+            foreach (DataRow item in data.Rows)
+            {
+                MatHang entry = new MatHang(item);
+                list.Add(entry);
+            }
+            return list;
+        }
 
         public int GetMaMH(string tenMH)
         {

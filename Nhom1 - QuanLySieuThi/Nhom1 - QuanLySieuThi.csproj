@@ -98,6 +98,18 @@
     <Compile Include="GUI\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fQuanLyHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyHang.Designer.cs">
+      <DependentUpon>fQuanLyHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fThongKeSLNhapXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fThongKeSLNhapXuat.Designer.cs">
+      <DependentUpon>fThongKeSLNhapXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ChiTietHoaDonBan.cs" />
     <Compile Include="Models\ChiTietHoaDonNhap.cs" />
     <Compile Include="Models\HoaDonBan.cs" />
@@ -129,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyHang.resx">
+      <DependentUpon>fQuanLyHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fThongKeSLNhapXuat.resx">
+      <DependentUpon>fThongKeSLNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

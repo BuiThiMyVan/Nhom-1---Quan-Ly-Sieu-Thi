@@ -29,6 +29,17 @@ namespace Nhom1___QuanLySieuThi.DAO
             }
             return list;
         }
+        public List<ChiTietHoaDonBan> SLBan(DateTime CanTren, DateTime CanDuoi)
+        {
+            List<ChiTietHoaDonBan> list = new List<ChiTietHoaDonBan>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("Proc_LaySLXuat @CanTren , @CanDuoi", new object[] { CanTren, CanDuoi });
+            foreach (DataRow item in data.Rows)
+            {
+                ChiTietHoaDonBan entry = new ChiTietHoaDonBan(item);
+                list.Add(entry);
+            }
+            return list;
+        }
         public ChiTietHoaDonBan GetById(int maHDB)
         {
             ChiTietHoaDonBan hdb = new ChiTietHoaDonBan();
