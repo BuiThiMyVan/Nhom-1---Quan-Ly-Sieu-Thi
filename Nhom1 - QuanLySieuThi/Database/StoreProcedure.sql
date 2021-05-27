@@ -354,3 +354,66 @@ begin
 end
 go
 Proc_LaySLTon
+-----------------------quynh-nhanvien-------------------------------
+
+CREATE PROCEDURE SP_NhanVien_Insert
+  @tenNhanVien NVARCHAR(50),
+  @ngaySinh DATE,
+  @gioiTinh NVARCHAR(3),
+  @diaChi NVARCHAR(100),
+  @soDienThoai VARCHAR(10)
+AS
+BEGIN
+  INSERT INTO NHANVIEN
+    (TenNV, NgaySinh, GioiTinh, DiaChi, SDT)
+  VALUES(@tenNhanVien, @ngaySinh, @gioiTinh, @diaChi, @soDienThoai)
+END
+GO
+
+CREATE PROCEDURE SP_NhanVien_Delete
+  @maNV INT
+AS
+BEGIN
+  UPDATE HOADONBAN
+  SET MaNV = NULL
+  WHERE MaNV = @maNV
+
+  DELETE NHANVIEN
+  WHERE MaNV = @maNV
+END
+GO
+
+CREATE PROCEDURE SP_NhanVien_Update
+  @maNV INT,
+  @tenNhanVien NVARCHAR(50),
+  @ngaySinh DATE,
+  @gioiTinh NVARCHAR(3),
+  @diaChi NVARCHAR(100),
+  @soDienThoai VARCHAR(10)
+AS
+BEGIN
+  UPDATE NHANVIEN
+  SET 
+  TenNV = @tenNhanVien,
+  NgaySinh = @ngaySinh,
+  GioiTinh = @gioiTinh,
+  DiaChi=@diaChi,
+  SDT=@soDienThoai
+  WHERE MaNV = @maNV
+END
+GO
+
+CREATE PROCEDURE SP_NhanVien_Search
+  @searchValue NVARCHAR(200)
+AS
+BEGIN
+  SELECT *
+  FROM NHANVIEN
+  WHERE MaNV LIKE N'%' + @searchValue + '%'
+    OR TenNV LIKE N'%' + @searchValue + '%'
+	OR NgaySinh LIKE N'%' + @searchValue + '%'
+    OR GioiTinh LIKE N'%' + @searchValue + '%'
+    OR DiaChi LIKE N'%' + @searchValue + '%'
+	OR SDT LIKE N'%' + @searchValue + '%'
+END
+GO
