@@ -231,7 +231,7 @@
     <Content Include="HuongDan\fXoa-Confirm.PNG" />
     <Content Include="HuongDan\Login1.PNG" />
     <Content Include="HuongDan\sieuthi.png" />
-    <Content Include="script.sql" />
+    <Content Include="Database\script.sql" />
     <None Include="Resources\fMain_MatHang.png" />
     <None Include="Resources\fMatHang1.PNG" />
     <None Include="Resources\fMatHang-Them1.PNG" />
