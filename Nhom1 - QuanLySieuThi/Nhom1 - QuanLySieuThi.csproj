@@ -56,6 +56,7 @@
     <Compile Include="DAO\MatHangDAO.cs" />
     <Compile Include="DAO\NhaCungCapDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="GUI\fAdd_Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +68,18 @@
     </Compile>
     <Compile Include="GUI\fChiTietHoaDonBan.Designer.cs">
       <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fHuongDan.Designer.cs">
+      <DependentUpon>fHuongDan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fNhanVien.cs">
       <SubType>Form</SubType>
@@ -125,6 +138,7 @@
     <Compile Include="Models\MatHang.cs" />
     <Compile Include="Models\NhaCungCap.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fAdd_Invoice.resx">
@@ -132,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fChiTietHoaDonBan.resx">
       <DependentUpon>fChiTietHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fHuongDan.resx">
+      <DependentUpon>fHuongDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
@@ -159,17 +179,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -184,6 +206,50 @@
     <Content Include="Database\Data.sql" />
     <Content Include="Database\Database.sql" />
     <Content Include="Database\StoreProcedure.sql" />
+    <Content Include="HuongDan\fKhachHang-Sua.PNG" />
+    <Content Include="HuongDan\fKhachHang-Them.PNG" />
+    <Content Include="HuongDan\fKhachHang-TK.PNG" />
+    <Content Include="HuongDan\fKhachHang-Xoa-Confirm.PNG" />
+    <Content Include="HuongDan\fKhachHang-Xoa-Success.PNG" />
+    <Content Include="HuongDan\fKhachHang.PNG" />
+    <Content Include="HuongDan\fMatHang-Sua.PNG" />
+    <Content Include="HuongDan\fMatHang-Them1.PNG" />
+    <Content Include="HuongDan\fMatHang-Them_Success.PNG" />
+    <Content Include="HuongDan\fMatHang1.PNG" />
+    <Content Include="HuongDan\fMH-LamTrong.PNG" />
+    <Content Include="HuongDan\fMH-Refresh.PNG" />
+    <Content Include="HuongDan\fMH-Sua-Success.PNG" />
+    <Content Include="HuongDan\fMH-TK.PNG" />
+    <Content Include="HuongDan\fMH-Xoa-Success.PNG" />
+    <Content Include="HuongDan\fMHSua-Confirm.PNG" />
+    <Content Include="HuongDan\fNhanVien-Sua.PNG" />
+    <Content Include="HuongDan\fNhanVien-Them.PNG" />
+    <Content Include="HuongDan\fNhanVien-TK.PNG" />
+    <Content Include="HuongDan\fNhanVien-Xoa.PNG" />
+    <Content Include="HuongDan\fNhanVien.PNG" />
+    <Content Include="HuongDan\fThongKe.PNG" />
+    <Content Include="HuongDan\fXoa-Confirm.PNG" />
+    <Content Include="HuongDan\Login1.PNG" />
+    <Content Include="HuongDan\sieuthi.png" />
+    <Content Include="script.sql" />
+    <None Include="Resources\fMain_MatHang.png" />
+    <None Include="Resources\fMatHang1.PNG" />
+    <None Include="Resources\fMatHang-Them1.PNG" />
+    <None Include="Resources\fMatHang-Them_Success.PNG" />
+    <None Include="Resources\fMatHang-Sua.PNG" />
+    <None Include="Resources\fMHSua-Confirm.PNG" />
+    <None Include="Resources\fMH-Xoa-Success.PNG" />
+    <None Include="Resources\fMH-TK.PNG" />
+    <None Include="Resources\fNhanVien.PNG" />
+    <None Include="Resources\fKhachHang.PNG" />
+    <None Include="Resources\fNhapHang.PNG" />
+    <None Include="Resources\fNhapHoaDon.PNG" />
+    <None Include="Resources\fBanHang.PNG" />
+    <None Include="Resources\fChiTietHoaDon.PNG" />
+    <None Include="Resources\fThongKe.PNG" />
+    <None Include="Resources\fThongKe1.PNG" />
+    <Content Include="Resources\Login1.PNG" />
+    <None Include="Resources\fMain1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

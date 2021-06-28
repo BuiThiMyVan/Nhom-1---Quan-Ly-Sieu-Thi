@@ -1,5 +1,9 @@
 ﻿USE NHOM1_QUANLYSIEUTHI
 
+INSERT INTO TAIKHOAN VALUES('admin1','123')
+INSERT INTO TAIKHOAN VALUES('admin2','456')
+INSERT INTO TAIKHOAN VALUES('admin3','789')
+
 INSERT INTO NHACUNGCAP VALUES(N'Nhà phân phối cung cấp Bình dân','0902 246 699',N'Số 9 Cốm Vòng, Dịch Vọng Hậu, HN')
 INSERT INTO NHACUNGCAP VALUES(N'Nhà phân phối cung cấp Dương Nội','0912 561 552',N'352 Giải Phóng, Thanh Xuân, HN')
 INSERT INTO NHACUNGCAP VALUES(N'Nhà phân phối cung cấp Đa Lộc', '0973 470 475',N'Dương Nội, Hà Đông, HN')

@@ -1,6 +1,14 @@
 USE NHOM1_QUANLYSIEUTHI
 GO
 
+CREATE PROC QLST_Login
+@username nvarchar(50), @pass nvarchar(50)
+AS
+BEGIN
+	SELECT * FROM dbo.TAIKHOAN WHERE TenDN = @username AND MK = @pass
+END
+GO
+
 -----------------------Thiep Invoice------------------------
 CREATE PROCEDURE SP_ChiTietHoaDonNhap_GetAll
 AS
@@ -128,6 +136,53 @@ BEGIN
 end
 
 go
+
+CREATE PROCEDURE SP_MatHang_Update
+  @MaMH INT,
+  @TenMH NVARCHAR(MAX),
+  @SoLuong INT,
+  @DonViTinh NVARCHAR(10),
+  @DonGiaNhap FLOAT,
+  @DonGiaBan FLOAT,
+  @MaLH INT
+AS
+BEGIN
+  UPDATE MATHANG
+  SET TenMH = @TenMH,
+	  SoLuong = @SoLuong,
+	  DonViTinh = @DonViTinh,
+	  DonGiaNhap = @DonGiaNhap,
+	  DonGiaBan = @DonGiaBan,
+	  MaLH =@MaLH
+  WHERE MaMH = @MaMH
+END
+GO
+
+CREATE PROCEDURE SP_MatHang_Search
+  @searchValue NVARCHAR(200)
+AS
+BEGIN
+  SELECT *
+  FROM MATHANG
+  WHERE MaMH LIKE N'%' + @searchValue + '%'
+    OR  TenMH LIKE N'%' + @searchValue + '%'
+    OR  SoLuong LIKE N'%' + @searchValue + '%'
+    OR  DonViTinh LIKE N'%' + @searchValue + '%'
+    OR  DonGiaNhap LIKE N'%' + @searchValue + '%'
+	OR  DonGiaBan LIKE N'%' + @searchValue + '%'
+    OR  MaLH LIKE N'%' + @searchValue + '%'
+END
+GO
+
+CREATE PROCEDURE SP_LoaiHang_Search
+	@maMH INT
+AS
+BEGIN
+	SELECT lh.MaLH, lh.TenLH
+	FROM MATHANG mh, LOAIHANG lh
+	WHERE mh.MaMH = @maMH and mh.MaLH = lh.MaLH
+END
+GO
 -------------------------------------------------KDLONG-----------------------------------------------------------
 CREATE PROCEDURE SP_KhachHang_GetAll
 AS
@@ -249,9 +304,7 @@ AS
 BEGIN
   SELECT *
   FROM HOADONBAN
-  WHERE MaHDB LIKE N'%' + @searchValue + '%'
-    OR MaNV LIKE N'%' + @searchValue + '%'
-    OR NgayBan LIKE N'%' + @searchValue + '%'
+  WHERE MaHDB = @searchValue
 END
 GO
 
@@ -353,7 +406,7 @@ begin
 	select * from MATHANG where SoLuong >0
 end
 go
-Proc_LaySLTon
+
 -----------------------quynh-nhanvien-------------------------------
 
 CREATE PROCEDURE SP_NhanVien_Insert

@@ -17,7 +17,7 @@ namespace Nhom1___QuanLySieuThi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fNhanVien());
+            Application.Run(new fLogin());
         }
     }
 }

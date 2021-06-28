@@ -170,7 +170,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.btn_TimKiem.TabIndex = 23;
             this.btn_TimKiem.Text = "Tìm kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;
-            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click_1);
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // label10
             // 
@@ -222,6 +222,7 @@ namespace Nhom1___QuanLySieuThi.GUI
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fHoaDonBanHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fHoaDonBanHang";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSHoaDonBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

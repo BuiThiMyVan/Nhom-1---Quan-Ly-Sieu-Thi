@@ -79,23 +79,6 @@ namespace Nhom1___QuanLySieuThi.GUI
                 ) return false;
             return true;
         }
-        private void btn_TimKiem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string str = txt_TimKiem.Text.Trim();
-                if (str == "")
-                {
-                    MessageBox.Show("Chưa nhập thông tin tìm kiếm");
-                    return;
-                }
-                DSHoaDonBan.DataSource = HoaDonBanHangDAO.Instance.Search(str);
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
-            }
-        }
         private void btn_Sua_Click(object sender, EventArgs e)
         {
             try
@@ -192,9 +175,22 @@ namespace Nhom1___QuanLySieuThi.GUI
             }
         }
 
-        private void btn_TimKiem_Click_1(object sender, EventArgs e)
+        private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                string str = txt_TimKiem.Text.Trim();
+                if (str == "")
+                {
+                    MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+                    return;
+                }
+                DSHoaDonBan.DataSource = HoaDonBanHangDAO.Instance.Search(str);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+            }
         }
     }
 }
