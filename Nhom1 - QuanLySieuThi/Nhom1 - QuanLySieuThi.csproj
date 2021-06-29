@@ -205,6 +205,7 @@
   <ItemGroup>
     <Content Include="Database\Data.sql" />
     <Content Include="Database\Database.sql" />
+    <Content Include="Database\script.sql" />
     <Content Include="Database\StoreProcedure.sql" />
     <Content Include="HuongDan\fKhachHang-Sua.PNG" />
     <Content Include="HuongDan\fKhachHang-Them.PNG" />
@@ -231,7 +232,6 @@
     <Content Include="HuongDan\fXoa-Confirm.PNG" />
     <Content Include="HuongDan\Login1.PNG" />
     <Content Include="HuongDan\sieuthi.png" />
-    <Content Include="Database\script.sql" />
     <None Include="Resources\fMain_MatHang.png" />
     <None Include="Resources\fMatHang1.PNG" />
     <None Include="Resources\fMatHang-Them1.PNG" />
